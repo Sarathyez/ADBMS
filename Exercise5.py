@@ -37,6 +37,7 @@ coll=db["studlist"]
 #print("\nQ9:\n")
 #for x in coll.find({"address.city":{'$nin':['Kollam','Thiruvananthapuram']}},{"_id":0,"name.fname":1,"name.lname":1,"address.city":1}):
 #	print(x["name"]["fname"]+ " "+x["name"]["lname"]+ " ",x["address"]["city"])
+print("\nQ10:\n")
 for x in coll.find({"gender":"female","address.city":{'$nin':['Kollam','Thiruvananthapuram']}},{"_id":0,"name.fname":1,"name.lname":1,"address.city":1}):
 	print(x["name"]["fname"]+ " "+x["name"]["lname"]+ " ",x["address"]["city"])
 
